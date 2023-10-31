@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: ${MYSQL_CONNECT_STRING:jdbc:mysql://localhost/link-hub?createDatabaseIfNotExist=true&serverTimezone=UTC&characterEncoding=UTF-8}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+  jpa:
+    show-sql: true
