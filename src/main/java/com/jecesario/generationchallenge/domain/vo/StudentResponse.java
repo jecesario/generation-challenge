@@ -1,6 +1,5 @@
-package com.jecesario.generationchallenge.domain.models;
+package com.jecesario.generationchallenge.domain.vo;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,13 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
-@Entity(name = "students")
-public class Student {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class StudentResponse {
     private Integer id;
-
     private String name;
     private Integer age;
     private Double grade1;
