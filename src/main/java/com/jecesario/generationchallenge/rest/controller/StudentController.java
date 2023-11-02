@@ -26,7 +26,7 @@ public interface StudentController {
 
     @Operation(description = "Find all students")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "Return a student list"),
+            @ApiResponse(responseCode = "200", description = "Return a student list"),
             @ApiResponse(responseCode = "400", description = "Bad Request"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
@@ -35,16 +35,16 @@ public interface StudentController {
 
     @Operation(description = "Find a student by id")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "Return a student based on id"),
+            @ApiResponse(responseCode = "200", description = "Return a student based on id"),
             @ApiResponse(responseCode = "400", description = "Bad Request"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
     @GetMapping(value = "/{id}")
     ResponseEntity<StudentResponse> findById(@PathVariable Integer id);
 
-    @Operation(description = "Delete a student by id")
+    @Operation(description = "Edit a student")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "204", description = "Return no content"),
+            @ApiResponse(responseCode = "200", description = "Return the student edited"),
             @ApiResponse(responseCode = "400", description = "Bad Request"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
